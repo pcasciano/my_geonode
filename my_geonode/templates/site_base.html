@@ -3,3 +3,12 @@
       <link href="{{ STATIC_URL }}css/site_base.css" rel="stylesheet"/>
       <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet"/>
 {% endblock %}
+{% block extra-nav %}
+<li id="nav_polls">
+    <a href="/polls/">Polls</a>
+</li>
+<li id="nav_blog">
+    <a href="{% url 'zinnia_entry_archive_index' %}">Blog</a>
+</li>
+{% endblock %}
+{% block body %}{% block content %}{% endblock %}{% endblock %}
